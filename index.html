@@ -1,0 +1,625 @@
+# Invitación Premium XV Valentina 💖👑
+
+Copia TODO este código y reemplaza completamente el contenido de tu archivo `pagina.html`.
+
+⚠️ IMPORTANTE:
+Los archivos deben llamarse EXACTAMENTE así:
+
+* foto1.jpg
+* foto2.jpg
+* foto3.jpg
+* musica.mp3
+
+Todos deben estar dentro de la misma carpeta junto a `pagina.html`.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XV Valentina Jireth</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(to bottom,#1a0000,#3b0000,#120000,#000000);
+color:white;
+overflow-x:hidden;
+text-align:center;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background-image:radial-gradient(circle, rgba(255,215,0,0.25) 1px, transparent 1px);
+background-size:35px 35px;
+animation:brillos 12s linear infinite;
+z-index:-2;
+}
+
+@keyframes brillos{
+from{transform:translateY(0);}
+to{transform:translateY(40px);}
+}
+
+.rosa{
+position:fixed;
+top:-10%;
+font-size:26px;
+animation:caer linear infinite;
+opacity:0.8;
+z-index:-1;
+}
+
+@keyframes caer{
+0%{transform:translateY(-10vh) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+.portada{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.82)),
+url('foto1.jpg');
+
+background-size:cover;
+background-position:50% 25%;
+}
+
+.nombre{
+font-family:'Great Vibes',cursive;
+font-size:120px;
+color:#ffd700;
+text-shadow:
+0 0 15px rgba(255,215,0,0.5),
+0 0 40px rgba(255,215,0,0.3);
+
+animation:flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+.subtitulo{
+font-size:34px;
+margin-top:10px;
+letter-spacing:5px;
+}
+
+.frase{
+max-width:850px;
+margin-top:30px;
+font-size:22px;
+line-height:1.9;
+padding:0 15px;
+}
+
+.boton-entrar{
+display:inline-block;
+margin-top:40px;
+padding:20px 45px;
+border-radius:60px;
+background:linear-gradient(135deg,#ffd700,#fff4b0,#ffd700);
+background-size:300% 300%;
+animation:brilloBoton 6s ease infinite;
+color:#5a0000;
+font-weight:bold;
+text-decoration:none;
+font-size:22px;
+
+box-shadow:
+0 0 15px rgba(255,215,0,0.5),
+0 0 35px rgba(255,215,0,0.3);
+
+transition:0.4s;
+}
+
+.boton-entrar:hover{
+transform:translateY(-4px) scale(1.05);
+}
+
+.seccion{
+padding:100px 20px;
+opacity:0;
+transform:translateY(60px);
+animation:aparecer 1.2s ease forwards;
+}
+
+@keyframes aparecer{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.titulo{
+font-family:'Playfair Display',serif;
+font-size:52px;
+margin-bottom:40px;
+color:#ffd700;
+text-shadow:0 0 15px rgba(255,215,0,0.4);
+}
+
+.texto{
+max-width:950px;
+margin:auto;
+font-size:21px;
+line-height:2;
+}
+
+audio{
+margin-top:30px;
+border-radius:20px;
+}
+
+.galeria{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:50px;
+}
+
+.galeria img{
+width:320px;
+max-width:90%;
+border-radius:30px;
+border:4px solid gold;
+
+box-shadow:
+0 0 20px rgba(255,215,0,0.3),
+0 0 40px rgba(255,215,0,0.15);
+
+transition:0.5s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+.versiculo{
+margin-top:45px;
+background:rgba(255,215,0,0.08);
+border:1px solid rgba(255,215,0,0.4);
+padding:45px;
+border-radius:30px;
+max-width:850px;
+margin-left:auto;
+margin-right:auto;
+backdrop-filter:blur(8px);
+}
+
+.contador{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:50px;
+}
+
+.box{
+background:rgba(255,255,255,0.08);
+padding:35px;
+border-radius:30px;
+min-width:160px;
+border:2px solid rgba(255,215,0,0.35);
+backdrop-filter:blur(5px);
+}
+
+.numero{
+font-size:58px;
+font-weight:bold;
+color:#ffd700;
+}
+
+.label{
+margin-top:10px;
+font-size:20px;
+}
+
+.dress{
+max-width:700px;
+margin:auto;
+background:rgba(255,215,0,0.08);
+padding:40px;
+border-radius:30px;
+border:1px solid rgba(255,215,0,0.5);
+}
+
+.boton{
+display:inline-block;
+margin-top:40px;
+padding:22px 48px;
+border-radius:60px;
+
+background:linear-gradient(135deg,#ffd700,#fff4b0,#ffd700);
+background-size:300% 300%;
+
+animation:brilloBoton 6s ease infinite;
+
+color:#5a0000;
+font-weight:600;
+font-size:22px;
+letter-spacing:1px;
+text-decoration:none;
+
+border:2px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 0 15px rgba(255,215,0,0.5),
+0 0 40px rgba(255,215,0,0.25);
+
+transition:0.4s;
+}
+
+.boton:hover{
+transform:translateY(-4px) scale(1.06);
+
+box-shadow:
+0 0 25px rgba(255,215,0,0.7),
+0 0 60px rgba(255,215,0,0.4);
+}
+
+@keyframes brilloBoton{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.footer{
+padding:40px 20px;
+font-size:16px;
+color:#e7d6d6;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+@media(max-width:768px){
+
+.nombre{
+font-size:75px;
+}
+
+.subtitulo{
+font-size:24px;
+}
+
+.frase{
+font-size:18px;
+}
+
+.titulo{
+font-size:38px;
+}
+
+.texto{
+font-size:18px;
+}
+
+.numero{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="rosa" style="left:5%;animation-duration:10s;">🌹</div>
+<div class="rosa" style="left:15%;animation-duration:14s;">🌹</div>
+<div class="rosa" style="left:30%;animation-duration:11s;">🌹</div>
+<div class="rosa" style="left:45%;animation-duration:15s;">🌹</div>
+<div class="rosa" style="left:60%;animation-duration:12s;">🌹</div>
+<div class="rosa" style="left:75%;animation-duration:16s;">🌹</div>
+<div class="rosa" style="left:90%;animation-duration:13s;">🌹</div>
+
+<section class="portada">
+
+<div style="font-size:70px;">👑</div>
+
+<div class="nombre">Valentina</div>
+
+<div class="subtitulo">MIS XV AÑOS</div>
+
+<p class="frase">
+"Hay momentos que se convierten en recuerdos eternos…
+y esta noche será uno de ellos." ✨
+</p>
+
+<a href="#inicio" class="boton-entrar">
+Entrar a la Invitación ✨
+</a>
+
+<audio autoplay loop controls>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+<section class="seccion" id="inicio">
+
+<div class="titulo">Galería 💖</div>
+
+<div class="galeria">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+</div>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">Una noche especial ✨</div>
+
+<p class="texto">
+Con inmensa alegría y gratitud a Dios,
+mis padres William y María
+te invitan a celebrar conmigo este día tan especial,
+donde dejo atrás mi niñez para comenzar una nueva etapa
+llena de sueños, fe y bendiciones.
+</p>
+
+<div class="versiculo">
+
+<p class="texto">
+“Porque yo sé los planes que tengo para ti, afirma el Señor,
+planes de bienestar y no de calamidad,
+a fin de darte un futuro y una esperanza.”
+</p>
+
+<br>
+
+<strong>Jeremías 29:11</strong>
+
+</div>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">Sobre Valentina ❤️</div>
+
+<p class="texto">
+Valentina es una joven dulce, alegre y llena de luz.
+Ama profundamente a Jesús y encuentra en la danza cristiana
+una forma hermosa de adorarle y expresar su amor por Dios. ✨
+
+<br><br>
+
+Su sonrisa ilumina cada lugar y su vida ha sido rodeada
+del amor infinito de sus padres, familiares y amigos.
+
+<br><br>
+
+Hoy celebra no solo sus quince años,
+sino también cada bendición, sueño y propósito
+que Dios ha preparado para ella. 👑❤️
+</p>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">Cuenta Regresiva ⏳</div>
+
+<div class="contador">
+
+<div class="box">
+<div class="numero" id="dias">00</div>
+<div class="label">Días</div>
+</div>
+
+<div class="box">
+<div class="numero" id="horas">00</div>
+<div class="label">Horas</div>
+</div>
+
+<div class="box">
+<div class="numero" id="minutos">00</div>
+<div class="label">Minutos</div>
+</div>
+
+<div class="box">
+<div class="numero" id="segundos">00</div>
+<div class="label">Segundos</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">Información del Evento ✨</div>
+
+<p class="texto">
+📅 14 de Junio de 2026
+
+<br><br>
+
+⏰ 7:00 PM
+
+<br><br>
+
+📍 Calle 38 Número 17-140, María Eugenia
+</p>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">Dress Code 👗</div>
+
+<div class="dress">
+
+<p class="texto">
+✨ Ven con tu mejor outfit
+</p>
+
+<br>
+
+<p style="font-size:22px;color:#ffd700;">
+🚫 Reservar exclusivamente el color rojo ❤️
+</p>
+
+</div>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">Confirma tu asistencia 💌</div>
+
+<p class="texto">
+Será una noche inolvidable y nos encantaría compartirla contigo.
+</p>
+
+<a class="boton"
+href="https://tally.so/r/ja5PR9"
+target="_blank">
+Confirmar Asistencia ✨
+</a>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">🎵 Soundtrack de la Noche</div>
+
+<div style="
+max-width:700px;
+margin:auto;
+background:rgba(255,255,255,0.08);
+padding:35px;
+border-radius:30px;
+border:1px solid rgba(255,215,0,0.4);
+backdrop-filter:blur(8px);
+box-shadow:0 0 25px rgba(255,215,0,0.15);
+">
+
+<div style="font-size:60px;">🎧</div>
+
+<h3 style="
+font-size:32px;
+margin-top:15px;
+color:#ffd700;
+font-family:'Playfair Display',serif;
+">
+No La Comparen
+</h3>
+
+<p style="
+font-size:20px;
+margin-top:10px;
+color:#f5e6e6;
+">
+Madiel Lara ✨
+</p>
+
+<p style="
+margin-top:25px;
+line-height:1.8;
+font-size:18px;
+">
+Una canción especial que acompaña esta noche inolvidable,
+llena de alegría, amor y momentos que quedarán para siempre
+en el corazón. 💖
+</p>
+
+</div>
+
+</section>
+
+<section class="seccion">
+
+<div class="titulo">✨ Un Recuerdo para Siempre ✨</div>
+
+<div class="versiculo">
+
+<p class="texto">
+Gracias por acompañarme en uno de los días
+más importantes de mi vida.
+
+<br><br>
+
+Cada sonrisa, abrazo y momento compartido
+harán de esta noche un recuerdo eterno
+que guardaré por siempre en mi corazón. 👑💖
+
+<br><br>
+
+Con cariño,
+<br>
+<strong>Valentina Jireth</strong>
+</p>
+
+</div>
+
+</section>
+
+<div class="footer">
+
+Hecho con amor para los XV años de Valentina Jireth Marchena Roa 👑❤️
+
+</div>
+
+<script>
+
+const fechaEvento = new Date("June 14, 2026 19:00:00").getTime();
+
+setInterval(function(){
+
+const ahora = new Date().getTime();
+
+const distancia = fechaEvento - ahora;
+
+const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+
+const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+
+const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+document.getElementById("dias").innerHTML = dias;
+
+document.getElementById("horas").innerHTML = horas;
+
+document.getElementById("minutos").innerHTML = minutos;
+
+document.getElementById("segundos").innerHTML = segundos;
+
+},1000);
+
+</script>
+
+</body>
+</html>
+```
+Después guarda el archivo y ábrelo nuevamente con Google Chrome 👑✨
